@@ -4,9 +4,8 @@
     margin: 0;
 }
 .container-image {
-    height: 1200px;
     width: 100%;
-    margin: 0 10px 0 10px;
+    /*margin: 0 10px 0 10px;*/
 }
 .navbar-top {
     background-color: transparent;
@@ -25,7 +24,7 @@
 }
 
 .countdown span {
-    font-size: 3rem;
+    font-size: 2vw !important;
     margin-left: 0.8rem;
 }
 
@@ -52,9 +51,10 @@
     margin-left: 0;
 }
 .timer {
-    position: relative;
-    bottom: 16%;
-    left: 1px;
+    font-size:2vw;
+    position: absolute;
+    top: 105%;
+    left: 775px;
 }
 
 /*<!----------------------------------------End Countdown--------------------------------------------------->*/
