@@ -3,9 +3,10 @@
     padding: 0;
     margin: 0;
 }
-#container {
+.container-image {
     height: 1200px;
     width: 100%;
+    margin: 0 10px 0 10px;
 }
 .navbar-top {
     background-color: transparent;
@@ -17,7 +18,6 @@
 #sticky-footer {
     flex-shrink: none;
 }
-
 /*<!----------------------------------------End Countdown--------------------------------------------------->*/
 .countdown {
     text-transform: uppercase;
@@ -76,7 +76,6 @@
     transform: translateX(-50%);
     display: block;
 }
-
 
 .lined .nav-link {
     border: none;
