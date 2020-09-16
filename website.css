@@ -1,44 +1,66 @@
+/*<!----------------------------------------General CSS--------------------------------------------------->*/
 * {
     padding: 0;
     margin: 0;
 }
-#jumbo-container {
+#container {
     height: 1200px;
     width: 100%;
 }
-.navbar {
+.navbar-top {
     background-color: transparent;
     position: relative;
     bottom: 1185px;
-    right: 5px;
+    left: 5px;
 }
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
+/*<!----------------------------------------End Countdown--------------------------------------------------->*/
+.countdown {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.countdown span {
+    font-size: 3rem;
+    margin-left: 0.8rem;
+}
+
+.countdown span:first-of-type {
+    margin-left: 0;
+}
+
+.countdown-circles {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.countdown-circles span {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-circles span:first-of-type {
+    margin-left: 0;
+}
+.timer {
+    position: relative;
+    bottom: 16%;
+    left: 1px;
+}
+
+/*<!----------------------------------------End Countdown--------------------------------------------------->*/
+
 
 /*<!----------------------------------------Start Tabs--------------------------------------------------->*/
-
-/*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
-*/
-
-/* Rounded tabs */
-
-@media (min-width: 576px) {
-    .rounded-nav {
-        border-radius: 50rem !important;
-    }
-}
-
-@media (min-width: 576px) {
-    .rounded-nav .nav-link {
-        border-radius: 50rem !important;
-    }
-}
-
-/* With arrow tabs */
-
 .with-arrow .nav-link.active {
     position: relative;
 }
@@ -73,13 +95,6 @@
     height: 250px;
 }
 
-body {
-    background: #304352;
-    background: -webkit-linear-gradient(to right, #304352, #d7d2cc);
-    background: linear-gradient(to right, #304352, #d7d2cc);
-    min-height: 100vh;
-}
-
 .nav-pills .nav-link {
     color: #555;
 }
@@ -89,25 +104,4 @@ body {
 
 .box-a {
     height: 300px;
-}
-
-
-.code-style {
-    background: #f4f4f4;
-    border: 1px solid #ddd;
-    border-left: 3px solid #f36d33;
-    color: #666;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1em 1.5em;
-    display: block;
-    word-wrap: break-word;
-    transition: opacity .2s cubic-bezier(.42,0,.34,1.01);
-    opacity: 0;
-    float: left;
 }
