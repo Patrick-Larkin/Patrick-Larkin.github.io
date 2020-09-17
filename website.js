@@ -42,5 +42,3 @@ $(document).ready( function () {
 	// 	$('#author').html(data.quoteAuthor);
 	// 	$('#tweetQuote').attr('href', 'https://twitter.com/intent/tweet?text=' + data.quoteText + '- ' + data.quoteAuthor).attr('target','_blank');
 	// }
-
-
