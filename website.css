@@ -2,137 +2,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Oxygen:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Special+Elite');
-/*<!----------------------------------------General CSS--------------------------------------------------->*/
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Fira Sans', sans-serif;
 }
-.container-image {
-    width: 100%;
-    /*margin: 0 10px 0 10px;*/
+
+.code-font {
+    height: 250px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em !important;
+    display: block;
+    word-wrap: break-word;
+    margin-block-end: 0 !important;
 }
-.navbar-top {
-    background-color: transparent;
-    position: relative;
-    bottom: 1185px;
-    left: 5px;
-}
-
-/*<!----------------------------------------End Countdown--------------------------------------------------->*/
-.countdown {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.countdown span {
-    font-size: 2vw !important;
-    margin-left: 0.8rem;
-}
-
-.countdown span:first-of-type {
-    margin-left: 0;
-}
-
-.countdown-circles {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.countdown-circles span {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.countdown-circles span:first-of-type {
-    margin-left: 0;
-}
-.timer {
-    font-size:2vw;
-    position: absolute;
-    top: 105%;
-    left: 775px;
-}
-
-/*<!----------------------------------------End Countdown--------------------------------------------------->*/
-
-
-/*<!----------------------------------------Start Tabs--------------------------------------------------->*/
-/*.with-arrow .nav-link.active {*/
-/*    position: relative;*/
-/*}*/
-
-/*.with-arrow .nav-link.active::after {*/
-/*    content: '';*/
-/*    border-left: 6px solid transparent;*/
-/*    border-right: 6px solid transparent;*/
-/*    border-top: 6px solid #2b90d9;*/
-/*    position: absolute;*/
-/*    bottom: -6px;*/
-/*    left: 50%;*/
-/*    transform: translateX(-50%);*/
-/*    display: block;*/
-/*}*/
-
-/*.lined .nav-link {*/
-/*    border: none;*/
-/*    border-bottom: 3px solid transparent;*/
-/*}*/
-
-/*.lined .nav-link:hover {*/
-/*    border: none;*/
-/*    border-bottom: 3px solid transparent;*/
-/*}*/
-
-/*.lined .nav-link.active {*/
-/*    background: none;*/
-/*    color: #555;*/
-/*    border-color: #2b90d9;*/
-/*    height: 250px;*/
-/*}*/
-
-/*.nav-pills .nav-link {*/
-/*    color: #555;*/
-/*}*/
-/*.text-uppercase {*/
-/*    letter-spacing: 0.1em;*/
-/*}*/
-
-/*.box-a {*/
-/*    height: 300px;*/
-/*}*/
-
-/*New CSS*/
-
 
 /* Beta Zoomer Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    /*Start About Me CSS*/
-    .container-profile {
-        margin: 8px;
-        background: red;
+@media only screen and (max-width: 599px) {
+    .hidden-sm {
+        display: none;
     }
+
+    /*<!----------------------------------------Start Countdown--------------------------------------------------->*/
+    .countdown {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .countdown span {
+        font-size: 2vw !important;
+        margin-left: 0.8rem;
+    }
+
+    .countdown span:first-of-type {
+        margin-left: 0;
+    }
+
+    .countdown-circles {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .countdown-circles span {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .countdown-circles span:first-of-type {
+        margin-left: 0;
+    }
+
+    .timer {
+        font-size: 2vw;
+    }
+
+    /*<!----------------------------------------End Countdown--------------------------------------------------->*/
+    /*<!----------------------------------------Start About Me CSS--------------------------------------------------->*/
+    .container-about-me {
+        margin: 5px 8px;
+        background-color: red;
+    }
+
     .about-me {
         border: 2px solid black;
         margin-bottom: 10px;
     }
+
     .about-me h1 {
         background-color: grey;
         padding: 3px 0 3px 4px;
-
     }
+
     .about-me h6 {
         font-family: 'Oxygen', sans-serif;
         padding: 2px 0 3px 3px;
     }
-    /*End About Me CSS*/
 
+    /*<!----------------------------------------End End About Me CSS--------------------------------------------------->*/
+    /*<!----------------------------------------Start Profile--------------------------------------------------->*/
     /*Start Profile Card*/
     .container-profile-card {
         padding: 4px;
@@ -166,30 +132,235 @@
         flex-direction: column;
         margin: 5px 10px 2px 10px;
     }
+
     /*End Profile Card*/
+    /*Starting Meat and Potatoes*/
+    .container-profile-details {
+        display: flex;
+        flex-direction: column;
+        margin: 8px;
+        background-color: #2b90d9;
+    }
 
-    /*Start Quote CSS*/
-    .quote {
-        display: inline-block;
-        margin: 1em;
+    .container-profile-details div {
+        padding: 10px 25px 10px 25px;
+        margin: 50px;
+    }
+
+    .detailed-title {
+        display: flex;
+        padding: 10px 25px 10px 25px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    /*Ending Meat and Potatoes*/
+    /*Start Skills*/
+    .container-skills {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 8px;
+        padding: 5px 10px 0 10px;
+        background-color: #2b90d9;
+    }
+
+    .container-skills .language {
+        border: black solid 3px;
+        padding: 10px 10px;
+        margin: 0 5px 5px 5px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /*End Skills*/
+    /*<!----------------------------------------Start Profile--------------------------------------------------->*/
+    /*<!----------------------------------------Start Recent work--------------------------------------------------->*/
+    .container-work {
+        margin: 0 8px 10px 8px;
+        padding: 5px 0 5px 0;
+        background: #666666;
+    }
+
+    /*Start Project Cards*/
+    .container-project {
+        padding: 5px 0 10px 0;
+        margin: 8px 8px 8px 8px;
+        border: solid black 3px;
+    }
+
+    /*Start Tabs*/
+    .container-tab {
+        display: flex;
+        background-color: skyblue;
+    }
+
+    .tab {
         overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        margin: 10px 0;
+        padding: 2px 0 2px 4px;
     }
-    blockquote {
-        background-color: #fff;
-        border: solid 2px #757575;
-        display: inline-block;
+
+    .tab:nth-child(1) {
+        background: red;
+        flex-grow: 2;
+        margin: 8px 0 8px 2px;
+    }
+
+    .tab:nth-child(2) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 0 8px 0;
+    }
+
+    .tab:nth-child(3) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 0 8px 0;
+    }
+
+    .tab:nth-child(4) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 2px 8px 0;
+    }
+
+    /*End Tabs*/
+    /*Start Tabs Content*/
+    .tab-content {
+        margin: 0 8px 8px 8px;
+        padding: 2px 5px 2px 2px;
+        background-color: darkkhaki;
+    }
+
+    /*End Tabs Content*/
+    /*<!----------------------------------------End Recent Work--------------------------------------------------->*/
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /*<!----------------------------------------General CSS--------------------------------------------------->*/
+    * {
+        box-sizing: border-box;
+        padding: 0;
         margin: 0;
-        padding: 1em;
+        font-family: 'Fira Sans', sans-serif;
+    }
+
+    .container-image {
+        width: 100%;
+        /*margin: 0 10px 0 10px;*/
+    }
+
+    .navbar-top {
+        background-color: transparent;
         position: relative;
+        bottom: 1185px;
+        left: 5px;
     }
-    cite {
-        display: block;
-        font-style: italic;
-        text-align: right;
+
+    /*<!----------------------------------------End General CSS--------------------------------------------------->*/
+    /*<!----------------------------------------Start Countdown--------------------------------------------------->*/
+    .countdown {
+        text-transform: uppercase;
+        font-weight: bold;
     }
-    /*End Quote CSS*/
 
+    .countdown span {
+        font-size: 2vw !important;
+        margin-left: 0.8rem;
+    }
 
+    .countdown span:first-of-type {
+        margin-left: 0;
+    }
+
+    .countdown-circles {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .countdown-circles span {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .countdown-circles span:first-of-type {
+        margin-left: 0;
+    }
+
+    .timer {
+        font-size: 2vw;
+    }
+
+    /*<!----------------------------------------End Countdown--------------------------------------------------->*/
+    /*<!----------------------------------------Start About Me CSS--------------------------------------------------->*/
+    .container-about-me {
+        margin: 5px 8px;
+        background-color: blue;
+    }
+
+    .about-me {
+        border: 2px solid black;
+        margin-bottom: 10px;
+    }
+
+    .about-me h1 {
+        background-color: grey;
+        padding: 3px 0 3px 4px;
+    }
+
+    .about-me h6 {
+        font-family: 'Oxygen', sans-serif;
+        padding: 2px 0 3px 3px;
+    }
+
+    /*<!----------------------------------------End End About Me CSS--------------------------------------------------->*/
+    /*<!----------------------------------------Start Profile--------------------------------------------------->*/
+    /*Start Profile Card*/
+    .container-profile-card {
+        padding: 4px;
+        margin: 8px;
+        border: 2px solid black;
+    }
+
+    .img-profile {
+        border-radius: 50%;
+        align-self: center;
+    }
+
+    .profile-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-card h2, ul {
+        align-self: center;
+        margin: 5px;
+    }
+
+    .profile-card ul a {
+        padding: 10px
+    }
+
+    .profile-info {
+        display: inline-flex;
+        flex-direction: column;
+        margin: 5px 10px 2px 10px;
+    }
+
+    /*End Profile Card*/
     /*Starting Meat and Potatoes*/
     .container-profile-details {
         display: flex;
@@ -205,12 +376,524 @@
     .title {
         font-size: 24px;
     }
-    .hidden-small {
+
+    /*Ending Meat and Potatoes*/
+    /*Start Skills*/
+    .container-skills {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 8px;
+        padding: 5px 10px 0 10px;
+        background-color: #2b90d9;
+    }
+
+    .container-skills .language {
+        border: black solid 3px;
+        padding: 10px 10px;
+        margin: 0 5px 5px 5px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /*End Skills*/
+    /*<!----------------------------------------Start Profile--------------------------------------------------->*/
+    /*<!----------------------------------------Start Recent work--------------------------------------------------->*/
+    .container-work {
+        margin: 0 8px 10px 8px;
+        padding: 5px 0 5px 0;
+        background: #666666;
+    }
+
+    /*Start Project Cards*/
+    .container-project {
+        padding: 5px 0 10px 0;
+        margin: 8px 8px 8px 8px;
+        border: solid black 3px;
+    }
+
+    /*Start Tabs*/
+    .container-tab {
+        display: flex;
+        background-color: skyblue;
+    }
+
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        margin: 10px 0;
+        padding: 2px 0 2px 4px;
+    }
+
+    .tab:nth-child(1) {
+        background: red;
+        flex-grow: 2;
+        margin: 8px 0 8px 2px;
+    }
+
+    .tab:nth-child(2) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 0 8px 0;
+    }
+
+    .tab:nth-child(3) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 0 8px 0;
+    }
+
+    .tab:nth-child(4) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 2px 8px 0;
+    }
+
+    /*End Tabs*/
+    /*Start Tabs Content*/
+    .tab-content {
+        margin: 0 8px 8px 8px;
+        padding: 2px 5px 2px 2px;
+        background-color: darkkhaki;
+    }
+
+    /*End Tabs Content*/
+    /*<!----------------------------------------End Recent Work--------------------------------------------------->*/
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .hidden-md {
         display: none;
     }
+
+    /*<!----------------------------------------Start Countdown--------------------------------------------------->*/
+    .countdown {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .countdown span {
+        font-size: 2vw !important;
+        margin-left: 0.8rem;
+    }
+
+    .countdown span:first-of-type {
+        margin-left: 0;
+    }
+
+    .countdown-circles {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .countdown-circles span {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .countdown-circles span:first-of-type {
+        margin-left: 0;
+    }
+
+    .timer {
+        font-size: 2vw;
+    }
+
+    /*<!----------------------------------------End Countdown--------------------------------------------------->*/
+    /*<!----------------------------------------Start About Me CSS--------------------------------------------------->*/
+    .container-about-me {
+        margin: 5px 8px;
+        background-color: darkorange;
+    }
+
+    .about-me {
+        border: 2px solid black;
+        margin-bottom: 10px;
+    }
+
+    .container-about-me {
+        margin: 5px 8px;
+        background-color: darkorange;
+    }
+
+    /*.about-me h1 {*/
+    /*    display: inline-flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*    height: 150px;*/
+    /*    border: 3px solid green;*/
+    /*    background-color: grey;*/
+    /*    font-family: 'Fondamento', cursive;*/
+    /*    font-size: 75px;*/
+    /*    text-align: center;*/
+    /*    padding: 30px 0 0 0;*/
+    /*    margin: 5px;*/
+    /*}*/
+
+    .about-me h6 {
+        font-family: 'Oxygen', sans-serif;
+        font-size: 20px;
+        padding: 2px 0 3px 3px;
+    }
+
+    /*<!----------------------------------------End End About Me CSS--------------------------------------------------->*/
+    /*<!----------------------------------------Start Profile--------------------------------------------------->*/
+    /*Start Profile Card*/
+    .container-profile-card {
+        padding: 4px;
+        margin: 8px;
+        border: 2px solid black;
+        background-color: hotpink;
+    }
+
+
+    .img-profile {
+        width: 250px;
+        height: 250px;
+        align-self: center;
+    }
+
+    .profile-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-card h2, ul {
+        align-self: center;
+        margin: 5px;
+    }
+
+    .profile-card ul a {
+        padding: 10px
+    }
+
+    .profile-info {
+        display: inline-flex;
+        flex-direction: column;
+        margin: 5px 10px 2px 10px;
+        font-size: 24px;
+    }
+
+    /*End Profile Card*/
+    /*Starting Meat and Potatoes*/
+    .container-profile-details {
+        margin: 8px;
+        background-color: #2b90d9;
+    }
+
+    .detailed-title {
+        display: inline-flex;
+        margin: 8px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    /*div > p {*/
+    /*    font-size: 24px;*/
+    /*}*/
     /*Ending Meat and Potatoes*/
+    /*Start Skills*/
+    .container-skills {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 8px;
+        padding: 5px 10px 0 10px;
+        background-color: #2b90d9;
+    }
 
+    .container-skills .language {
+        border: black solid 3px;
+        padding: 10px 10px;
+        margin: 0 5px 5px 5px;
+        justify-content: space-around;
+        align-items: center;
+    }
 
+    /*End Skills*/
+    /*<!----------------------------------------End Profile--------------------------------------------------->*/
+    /*<!----------------------------------------Start Recent work--------------------------------------------------->*/
+    .container-work {
+        margin: 0 8px 10px 8px;
+        padding: 5px 0 5px 0;
+        background: #666666;
+    }
+
+    /*Start Project Cards*/
+    .container-project {
+        padding: 5px 0 10px 0;
+        margin: 8px 8px 8px 8px;
+        border: solid black 3px;
+    }
+
+    /*Start Tabs*/
+    .container-tab {
+        display: flex;
+        background-color: skyblue;
+    }
+
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        margin: 10px 0;
+        padding: 2px 0 2px 4px;
+    }
+
+    .tab:nth-child(1) {
+        background: red;
+        flex-grow: 2;
+        margin: 8px 0 8px 2px;
+    }
+
+    .tab:nth-child(2) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 0 8px 0;
+    }
+
+    .tab:nth-child(3) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 0 8px 0;
+    }
+
+    .tab:nth-child(4) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 2px 8px 0;
+    }
+
+    /*End Tabs*/
+    /*Start Tabs Content*/
+    .tab-content {
+        margin: 0 8px 8px 8px;
+        padding: 2px 5px 2px 2px;
+        background-color: darkkhaki;
+    }
+
+    /*End Tabs Content*/
+    /*<!----------------------------------------End Recent Work--------------------------------------------------->*/
+}
+/*Navbar styling change small screens*/
+@media (max-width: 991px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+
+/* Chad Large & X-Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .hidden-lg {
+        display: none;
+    }
+
+    /*<!----------------------------------------Start Navbar--------------------------------------------------->*/
+    .navbar {
+        transition: all 0.4s;
+        /*position: absolute;*/
+    }
+
+    .navbar .nav-link {
+        color: #fff;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .navbar .navbar-brand {
+        color: #fff;
+    }
+
+    .navbar.active {
+        background: #fff;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.active .nav-link {
+        color: #555;
+    }
+
+    .navbar.active .nav-link:hover,
+    .navbar.active .nav-link:focus {
+        color: #555;
+        text-decoration: none;
+    }
+
+    .navbar.active .navbar-brand {
+        color: #555;
+    }
+
+    /*<!----------------------------------------End Navbar--------------------------------------------------->*/
+    /*<!----------------------------------------Start Jumbotron--------------------------------------------------->*/
+    .container-nav {
+        width: 100%;
+        height: 900px;
+        background-image: url('ibm.jpg');
+        background-size: 100% 100%;
+        border: 1px solid red;
+    }
+
+    /*Start Timer*/
+    .countdown {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .countdown span {
+        font-size: 2vw !important;
+        margin-left: 0.8rem;
+    }
+
+    .countdown span:first-of-type {
+        margin-left: 0;
+    }
+
+    .countdown-circles {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .countdown-circles span {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .countdown-circles span:first-of-type {
+        margin-left: 0;
+    }
+
+    .timer {
+        display: inline;
+        font-size: 2vw;
+        position: relative;
+        bottom: -750px;
+        left: 8px;
+    }
+    /*<!----------------------------------------Start Jumbotron--------------------------------------------------->*/
+    /*<!----------------------------------------Start About Me CSS--------------------------------------------------->*/
+    .container-about-me {
+        /*margin: 5px 8px;*/
+        background-color: wheat;
+
+    }
+
+    .about-me {
+        display: inline-flex;
+        border: 2px solid black;
+        margin-bottom: 10px;
+    }
+
+    .container-about-me {
+        margin: 5px 8px;
+        background-color: darkorange;
+    }
+
+    .about-me h1 {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        border: 3px solid green;
+        background-color: grey;
+        font-family: 'Fondamento', cursive;
+        font-size: 50px;
+        text-align: center;
+        padding: 30px 75px;
+        margin: 5px;
+    }
+
+    .about-me h6 {
+        font-family: 'Oxygen', sans-serif;
+        font-size: 20px;
+        padding: 2px 0 3px 3px;
+    }
+    /*<!----------------------------------------End End About Me CSS--------------------------------------------------->*/
+    /*<!----------------------------------------Start Profile--------------------------------------------------->*/
+    /*Start Profile Card*/
+    .container-profile-card {
+        display: flex;
+        padding: 15px;
+        margin: 8px;
+        border: 2px solid black;
+        background-color: hotpink;
+    }
+
+    .img-profile {
+        width: 250px;
+        height: 250px;
+        align-self: center;
+    }
+
+    .profile-card {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-card h2, ul {
+        align-self: center;
+        margin: 5px;
+    }
+
+    .profile-card ul a {
+        padding: 10px
+    }
+
+    .profile-info {
+        font-family: 'Lora', serif;
+        margin: 5px 10px 2px 25px;
+        font-size: 24px;
+        border-left: solid yellow 3px;
+        padding-left: 25px;
+    }
+
+    /*End Profile Card*/
+    /*Starting Meat and Potatoes*/
+    .container-profile-details {
+        display: flex;
+        flex-direction: column;
+        margin: 8px;
+        background-color: #2b90d9;
+    }
+
+    .detailed-title {
+        display: flex;
+    }
+
+    .title {
+        font-size: 30px;
+        margin: 3px;
+    }
+    div h6 {
+        margin: 5px;
+    }
+
+    /*Ending Meat and Potatoes*/
     /*Start Skills*/
     .container-skills {
         display: flex;
@@ -229,69 +912,94 @@
         align-items: center;
     }
     /*End Skills*/
+    /*<!----------------------------------------Start Profile--------------------------------------------------->*/
+    /*<!----------------------------------------Start Recent work--------------------------------------------------->*/
+    .container-work {
+        margin: 0 8px 10px 8px;
+        padding: 5px 0 5px 0;
+        background: #666666;
+    }
+    .container-project {
+        display: flex;
+        padding: 5px 0 10px 0;
+        margin: 8px 8px 8px 8px;
+        border: solid black 3px;
+    }
+    .project-img {
+        width: 12000px;
+        margin: 10px;
+    }
 
-    /*Start Buttons*/
-    /* Style the tab */
+    .project-info {
+        height: 500px;
+        margin: 10px;
+    }
+
+    /*Start Tabs*/
+    .container-tab {
+        display: flex;
+        background-color: skyblue;
+    }
+
     .tab {
         overflow: hidden;
         border: 1px solid #ccc;
         background-color: #f1f1f1;
+        margin: 10px 0;
+        padding: 2px 0 2px 4px;
     }
 
-    /* Style the buttons that are used to open the tab content */
-    .tab button {
-        background-color: inherit;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        transition: 0.3s;
+    .tab:nth-child(1) {
+        background: red;
+        flex-grow: 2;
+        margin: 8px 0 8px 2px;
     }
 
-    /* Change background color of buttons on hover */
-    .tab button:hover {
-        background-color: #ddd;
+    .tab:nth-child(2) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 0 8px 0;
     }
 
-    /* Create an active/current tablink class */
-    .tab button.active {
-        background-color: #ccc;
+    .tab:nth-child(3) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 0 8px 0;
     }
 
-    /* Style the tab content */
-    .tabcontent {
-        display: none;
-        padding: 6px 12px;
-        border: 1px solid #ccc;
-        border-top: none;
+    .tab:nth-child(4) {
+        background: red;
+        flex-grow: 1;
+        margin: 8px 2px 8px 0;
     }
-    /*End Additional Skills*/
+    /*End Tabs*/
 
-
-
-
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .about-me {
-        background: yellowgreen;
+    /*Start Tabs Content*/
+    .tab-content {
+        margin: 0 8px 8px 8px;
+        padding: 2px 5px 2px 2px;
+        background-color: darkkhaki;
     }
 
-}
+    .code-font {
+        height: 440px;
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        border-left: 3px solid #f36d33;
+        color: #666;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100% !important;
+        overflow: auto;
+        padding: 1em 1.5em !important;
+        display: block;
+        word-wrap: break-word;
+        margin-block-end: 0 !important;
+    }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .about-me {background: blue;}
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .about-me {background: orange;}
-}
-
-/* Chad Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .example {background: pink;}
+    /*End Tabs Content*/
+    /*<!----------------------------------------End Recent Work--------------------------------------------------->*/
 }
